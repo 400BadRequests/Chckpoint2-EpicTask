@@ -3,8 +3,8 @@ Repositorio do checkpoint 2 de digital enablement
 
 <h1>Integrantes</h1>
 <br>
-Luiz Phelipe - 86330
-Christian Chang - 86360
-Paulo Sérgio- 85873
-Gabriel Silva - 86404
-Caio Augusto - 82953
+Luiz Phelipe - Rm: 86330<br>
+Christian Chang - Rm: 86360<br>
+Paulo Sérgio- Rm: 85873<br>
+Gabriel Silva - Rm: 86404<br>
+Caio Augusto - Rm: 82953<br>
