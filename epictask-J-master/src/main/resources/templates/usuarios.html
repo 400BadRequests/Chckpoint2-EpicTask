@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="usuariosStyle.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+    <body>
+
+    <div class="Header">
+        <h1>EPIC TASK</h1>
+    </div>
+
+    <div class="titulo">
+        <h2>Usuarios</h2>
+    </div>
+
+    <div class="botoes">
+            <a href = "/register" class="btn btn-primary mb-3">Registre-se</a>
+            <a href = "/login" class="btn btn-primary mb-3">Login</a>
+    </div>
+
+    <ul th:each="usuario : ${usuarios}" >
+        <li>
+            <div class="card text-black bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">USUARIO</div>
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${usuario.nome}"></h5>
+                    <p class="card-text" th:text="${usuario.email}"></p>
+                    <p class="card-text" th:text="${usuario.senha}"></p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    </body>
+</html>

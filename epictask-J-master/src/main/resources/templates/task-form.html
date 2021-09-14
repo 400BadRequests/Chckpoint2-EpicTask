@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link th:href="style.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+
+	<h1>EPIC TASK</h1>
+	
+	<h2>Nova Tarefa</h2>
+	
+	<form action="/task" method="post" th:object="${task}" >
+		<input name="title" placeholder="título" th:field="*{title}">
+		<span th:errors="*{title}"></span>
+
+		<textarea rows="" cols="" name='description' th:field="*{description}" ></textarea>
+		<span th:errors="*{description}"></span>
+
+		<input name="points" type="range" min="10" max="500" th:field="*{points}">
+		<span th:errors="*{points}"></span>
+		
+		<a href="/task">Cancelar</a>
+		<button>Salvar</button>
+	</form>
+</body>
+</html>

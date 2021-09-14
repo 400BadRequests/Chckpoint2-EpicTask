@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register User</title>
+    <link th:href="registerStyle.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+    <body>
+
+    <div class="Header">
+        <h1>EPIC TASK</h1>
+    </div>
+
+    <div class="titulo">
+        <h2>Registre-se</h2>
+    </div>
+
+        <form action="/register" method="post" th:object="${usuario}" >
+            <div class="mb-8 row">
+                <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+                <div class="col-sm-10 input">
+                    <input name="nome" placeholder="nome" th:field="*{nome}" id="nome" required class="form-control input">
+                    <span th:errors="*{nome}"></span>
+                </div>
+            </div>
+
+            <div class="mb-8 row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10 input">
+                    <input type="email" name="email" placeholder="email" th:field="*{email}" id="email" class="form-control input">
+                    <span th:errors="*{email}"></span>
+                </div>
+            </div>
+
+            <div class="mb-8 row">
+                <label for="senha" class="col-sm-2 col-form-label">Senha</label>
+                <div class="col-sm-10 input">
+                    <input name="senha" placeholder="senha"
+                           min="8" max="20"
+                           th:field="*{senha}" id="senha" required
+                           class="form-control input">
+                    <span th:errors="*{senha}"></span>
+                </div>
+            </div>
+
+            <div class="col-auto row">
+                <a href="/login" class="btn btn-primary mb-8 botao">Cancelar</a>
+                <button type="submit" class="btn btn-primary mb-8">Salvar</button>
+            </div>
+        </form>
+    </body>
+</html>
