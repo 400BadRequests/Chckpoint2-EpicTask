@@ -1,5 +1,5 @@
 # Chckpoint2-EpicTask
-Repositorio do checkpoint 2 de digital enablement
+Repositorio do checkpoint 4 de digital enablement
 
 <h1>Integrantes</h1>
 <br>
